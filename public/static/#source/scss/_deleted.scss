@@ -1,0 +1,211 @@
+.filter {
+    &.filter-calendar-range {
+        min-width: 739px;
+        max-width: 739px;
+        min-height: 340px;
+    }
+}
+
+.calendar-range-field,
+.calendar-field-wrapper {
+    position: relative;
+    min-width: 388px;
+    max-width: 388px;
+
+    &__input {
+        width: 100%;
+        padding-right: 24px;
+    }
+    &__input-date {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    &__btn {
+        position: absolute;
+        right: 16px;
+        @include fixedWH(20px, 18px);
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -28px;
+            border: 0px solid transparent;
+            border-bottom: 0px solid #3f8483;
+        }
+        &.active::after {
+            border-width: 10px;
+        }
+    }
+}
+
+.calendar-field-wrapper {
+    margin-bottom: 12px;
+}
+
+.calendar-range-picker-block {
+    display: none;
+    max-height: 280px;
+    margin-top: 12px;
+    transition: 0s;
+    box-shadow: 0px 0px 16px rgba(16, 70, 73, 0.1);
+}
+
+.month-block {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #8bbfbb;
+    &:last-child {
+        border-right: none;
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 26px;
+        background-color: #3f8483;
+    }
+
+    &__name {
+        color: #ffffff;
+        @include fontSmall(600);
+        text-transform: uppercase;
+    }
+
+    &__prev-btn {
+        position: absolute;
+        left: 26px;
+    }
+
+    &__next-btn {
+        position: absolute;
+        right: 26px;
+        & > img {
+            transform: scale(-1, 1);
+        }
+    }
+
+    &__body {
+        border-bottom: 1px solid #8bbfbb;
+    }
+
+    &:first-child {
+        .month-block__body {
+            border-left: 1px solid #8bbfbb;
+        }
+        .month-block__header {
+            border-top-left-radius: 8px;
+        }
+        .month-block__body {
+            border-bottom-left-radius: 8px;
+        }
+    }
+    &:last-child {
+        .month-block__body {
+            border-right: 1px solid #8bbfbb;
+        }
+        .month-block__header {
+            border-top-right-radius: 8px;
+        }
+        .month-block__body {
+            border-bottom-right-radius: 8px;
+        }
+    }
+}
+
+.month-body {
+    &__week-row,
+    &__day-list {
+        display: grid;
+        grid-template-columns: repeat(7, 28px);
+        grid-column-gap: 4px;
+        grid-row-gap: 0;
+    }
+
+    &__week-row {
+        grid-template-rows: 28px;
+        padding: 4px 12px;
+        border-bottom: 1px solid #8bbfbb;
+    }
+
+    &__day-list {
+        grid-template-rows: repeat(6, 28px);
+        padding: 10px 12px;
+    }
+
+    & .month-item {
+        position: relative;
+        @include fixedWH(28px, 28px);
+        @include fontCaption();
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        user-select: none;
+        cursor: pointer;
+        transition: 0s;
+        transition: color 0.15s;
+
+        &.selected {
+            color: #fff;
+            background-color: #8bbfbb;
+        }
+
+        &.selected.select-begin::before,
+        &.selected:nth-child(7n-6)::before {
+            left: 0;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        &.selected.select-end::before,
+        &.selected:last-child::before,
+        &.selected:nth-child(7n)::before {
+            right: 0;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+
+        &.selected::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -20px;
+            right: -20px;
+            background-color: #8bbfbb;
+            z-index: -1;
+        }
+    }
+
+    .month-item-empty + .month-item.selected::before {
+        left: 0;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+}
+
+.month-info-block {
+    width: 248px;
+
+    .month-block__body {
+        flex-grow: 1;
+        padding: 16px;
+    }
+
+    &__input {
+        width: 100%;
+    }
+    &__input:first-child {
+        margin-bottom: 16px;
+    }
+
+    &__footer {
+        margin-top: 28px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

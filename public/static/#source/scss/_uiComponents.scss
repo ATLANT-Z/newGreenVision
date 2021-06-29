@@ -1,0 +1,455 @@
+$marginCheckbox: 8px;
+
+@mixin checkboxMarginLeft($margin) {
+    margin-left: $marginCheckbox + $margin !important;
+}
+@mixin checkboxMarginRight($margin) {
+    margin-right: $marginCheckbox + $margin !important;
+}
+@mixin checkboxMarginTop($margin) {
+    margin-top: $marginCheckbox + $margin !important;
+}
+@mixin checkboxMarginBottom($margin) {
+    margin-bottom: $marginCheckbox + $margin !important;
+}
+
+@mixin addClickArea($val, $position: relative) {
+    position: $position;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -$val;
+        left: -$val;
+        right: -$val;
+        bottom: -$val;
+    }
+}
+
+@mixin uiCheckbox {
+    position: relative;
+    display: block;
+    @include fixedWH(0px, 0px);
+    margin: $marginCheckbox;
+    @include checkboxMarginRight(8px);
+    background-color: transparent;
+
+    &::before,
+    &::after {
+        content: "";
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        background-color: #ffffff;
+        @include fixedWH(16px, 16px);
+        border: 1px solid $mainSiteColor;
+        border-radius: 4px;
+    }
+
+    &::after {
+        background-image: $backCheckImg;
+        //background-image: url(#{$icoPath}/checkboxOk.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 85%;
+        opacity: 0;
+    }
+    &:checked::after {
+        opacity: 1;
+    }
+}
+
+input[type="checkbox"].ui-checkbox {
+    @include uiCheckbox();
+}
+
+input[type="radio"].ui-checkbox {
+    @include uiCheckbox();
+}
+
+input[type="radio"].ui-radio {
+    position: relative;
+    margin: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 7px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid $color-text-orders;
+        transform: translate(-50%, -50%);
+    }
+
+    &:checked::after {
+        content: "";
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        padding: 5px;
+        background-color: $mainSiteColor;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.ui-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 24px 0;
+    gap: 24px;
+
+    @include mobile {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.ui-input-w {
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+
+    & > * + * {
+        margin-top: 2px;
+    }
+
+    @include mobile() {
+        min-width: 100% !important;
+    }
+}
+
+.ui-input-w-row {
+    display: flex;
+    align-items: center;
+
+    gap: 12px 16px;
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.ui-caption {
+    display: inline-flex;
+    flex-shrink: 20;
+    @include fontCaption();
+}
+
+%ui-input {
+    position: relative;
+
+    min-width: 268px;
+    padding: 12px 16px;
+    @include fontMid();
+
+    background-color: #ffffff;
+    border: 1px solid #8a8a8a;
+    border-radius: 8px;
+
+    &:focus,
+    &:hover {
+        border: 1px solid $mainSiteColor;
+    }
+
+    @include mobile() {
+        min-width: 100%;
+    }
+}
+
+input {
+    &::placeholder {
+        color: #8a8a8a;
+    }
+}
+
+.ui-input-date {
+    @extend %ui-input;
+}
+
+.ui-input {
+    @extend %ui-input;
+
+    input {
+        width: 100%;
+        padding-right: 32px;
+    }
+
+    &__eye-btn {
+        position: absolute;
+        width: 16px;
+        right: 16px;
+
+        top: 50%;
+        $transform: translateY(-50%);
+
+        user-select: none;
+        z-index: 2;
+
+        @include addClickArea(5px, absolute);
+
+        $that: &;
+        @at-root {
+            input[type="text"] ~ #{$that} {
+                &.hide {
+                    visibility: visible;
+                    z-index: 2;
+                    transform: $transform scale(1);
+                }
+
+                &.show {
+                    visibility: hidden;
+                    z-index: -1;
+                    transform: $transform scale(0);
+                }
+            }
+
+            input[type="password"] ~ #{$that} {
+                &.hide {
+                    visibility: hidden;
+                    z-index: -1;
+                    transform: $transform scale(0);
+                }
+
+                &.show {
+                    visibility: visible;
+                    z-index: 2;
+                    transform: $transform scale(1);
+                }
+            }
+        }
+    }
+
+    &__clear-btn {
+        position: absolute;
+        width: 16px;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+        z-index: 2;
+    }
+
+    &.number {
+        max-width: 126px;
+        min-width: 126px;
+    }
+}
+
+.ui-link {
+    @include fontMid();
+    color: $mainSiteColor;
+    text-decoration: underline;
+}
+
+.ui-btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    @include fontBig();
+    padding: 6px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.149);
+
+    .text {
+        margin-left: 8px;
+    }
+
+    &:hover {
+        padding-left: 16px;
+        .text {
+            margin-left: 12px;
+        }
+    }
+}
+
+.ui-ico {
+    width: 28px;
+    height: 28px;
+    display: flex;
+
+    overflow: hidden;
+
+    > img {
+        width: auto;
+        height: 100%;
+        object-fit: fill;
+
+        margin: auto;
+    }
+}
+
+%ui-btn {
+    display: flex;
+    align-items: center;
+
+    & > * + * {
+        margin-left: 4px;
+    }
+
+    @include fontBig();
+    padding: 8px 16px;
+
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.ui-main-btn {
+    @extend %ui-btn;
+
+    color: #fff;
+    background-color: $color-main;
+
+    &:disabled {
+        background-color: $color-text-grey;
+
+        cursor: not-allowed;
+        &:hover {
+            background-color: $color-text-orders;
+        }
+    }
+
+    &:hover {
+        background-color: $color-hov;
+    }
+}
+
+.ui-second-btn {
+    @extend %ui-btn;
+
+    color: $color-main;
+    background-color: #ffffff;
+    border: 1px solid $color-main;
+
+    &:hover {
+        box-shadow: 0 0 12px transparentize($color: $color-main, $amount: 0.8);
+    }
+}
+
+.ui-third-btn {
+    @extend %ui-btn;
+
+    color: $color-text-orders;
+    background: #ffffff;
+    border: 1px solid transparent;
+
+    &:hover {
+        color: $color-main;
+        border: 1px solid $color-main;
+    }
+
+    &.green {
+        color: $color-main;
+    }
+}
+
+.ui-simple-btn {
+    @include fontMid;
+    color: $color-text-orders;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-main;
+    }
+
+    &.green {
+        color: $color-main;
+    }
+}
+
+.ui-caption-btn {
+    @include fontCaption;
+
+    color: $mainSiteColor;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-main-hov;
+    }
+}
+
+.ui-radio-group {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+}
+
+.ui-radio-w {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+        margin-left: 10px;
+    }
+}
+
+.ui-radio-cap {
+    @include fontMid;
+    color: #363636;
+}
+
+.ui-select {
+    position: relative;
+
+    .ui-input {
+        padding-right: 48px;
+    }
+
+    &.active & {
+        &__list {
+            overflow: auto;
+            max-height: 80vh;
+        }
+
+        &__btn {
+            transform: translateY(-50%) rotate(90deg);
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        padding: 0 6px;
+        background-color: #ffffff;
+        box-shadow: $block-shadow;
+
+        overflow: hidden;
+        max-height: 0px;
+    }
+
+    &__item {
+        padding: 12px;
+        cursor: pointer;
+
+        &:hover {
+            color: $mainSiteColor;
+        }
+
+        & + & {
+            border-top: 1px solid $color-text-grey;
+        }
+    }
+}

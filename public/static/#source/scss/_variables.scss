@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$color-main: #009b44;
+$color-main-hov: #106e19;
+$color-back-grey: #c4c4c4;
+$color-text-orders: #363636;
+$color-text-grey: #8a8a8a;
+$color-red-btm: #ff0000;
+$font-roboto-reg: "Roboto", sans-serif;
+$border-grey: 1px solid #d1d1d1;
+$line-grey-col: 1px solid #c4c4c4;
+$color-hov: #287231;
+$block-shadow: 0px 3px 11px rgba(0, 0, 0, 0.1);
+$border-radius: 8px;
+
+//вложенности
+%text-centr {
+    text-align: center;
+}
+
+%disp-flex {
+    display: flex;
+}
+
+%btm-ord-without-back {
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+%position-orders-inf {
+    display: flex;
+    align-items: flex-start;
+    max-width: 459px;
+    width: 100%;
+}
+
+%icon-position-cent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%font-weight-400 {
+    font-weight: 400;
+}
+
+%text-main {
+    font-family: $font-roboto-reg;
+}
+%pos-cent-marg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%margin-right-icon {
+    margin-right: 22px;
+}
+
+%text-size-my-orders {
+    line-height: 20px;
+    font-size: 16px;
+}
+
+%padding-left-my-orders {
+    padding-left: 14px;
+}
+
+%pos-left-flex {
+    display: flex;
+    align-items: center;
+}
+
+%pos-cent-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%marg-bott {
+    margin-bottom: 40px;
+}
+
+%input-hov-act {
+    border: 1px solid #159822;
+}
+
+//mixin
+@mixin box-green {
+    @extend %pos-cent-marg;
+    max-width: 960px;
+    margin-bottom: 76px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    @extend %input-hov-act;
+    border-radius: 8px;
+    font-family: $font-roboto-reg;
+    box-sizing: border-box;
+}
+
+@mixin btn-inp-form {
+    @extend %text-main;
+    @extend %pos-cent-marg;
+    max-width: 173px;
+    display: block;
+    padding: 8px 13px;
+    color: #ffffff;
+    background-color: $color-main;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid $color-main;
+    cursor: pointer;
+}
+
+@mixin main-text {
+    font-family: $font-roboto-reg;
+    font-size: 18px;
+    text-align: center;
+}
+
+@mixin box-advantages {
+    @extend %pos-cent-flex;
+    @extend %text-main;
+    width: 262px;
+    min-height: 216px;
+    padding: 0 22px;
+    text-align: center;
+    border: $border-grey;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+$anim-time: 0.3s;
+$anim-small-time: 0.15s;
+
+$uiTrans: transparentize(
+    $color: #000000,
+    $amount: 0.8,
+);
+
+@mixin anim($duration: $anim-time) {
+    transition: $duration ease-in-out;
+}
+
+$smScreenWidth: 1280px;
+$smScreenHeight: 720px;
+
+$bigMobileWidth: 960px;
+
+$mobileWidth: 560px;
+$mobileHeight: 600px;
+
+@mixin smallScreen {
+    @media (max-width: $smScreenWidth), (max-height: $smScreenHeight) {
+        @content;
+    }
+}
+
+@mixin bigMobile {
+    @media (max-width: $bigMobileWidth), (max-height: $mobileHeight) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobileWidth), (max-height: $mobileHeight) {
+        @content;
+    }
+}
+
+@mixin setAbs($top: 0, $left: 0, $right: 0, $bottom: 0) {
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin absoluteGrow($pos: absolute, $pad: 0) {
+    position: $pos;
+    @include setAbs($pad, $pad, $pad, $pad);
+}

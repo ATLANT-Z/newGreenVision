@@ -1,0 +1,286 @@
+$pathToIcons: "../icons";
+$maxContentWidth: 1440px;
+
+$mainSiteColor: #159822;
+$activeSiteColor: #106e19;
+$transpColor: rgba(21, 152, 34, 0.05);
+$paddingTopForBtn: 0px;
+$backCheckImg: url(/public/icons/checkboxOk.svg);
+
+$devIcoPath: "../icons/";
+$prodIcoPath: "/icons/";
+
+$icoPath: $devIcoPath;
+
+main {
+    padding-top: 0 !important;
+}
+section {
+    padding: 0px;
+}
+ul {
+    color: inherit;
+}
+
+.promocode {
+    padding: 0;
+    background: #fff;
+    text-align: left;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: initial;
+}
+.btn {
+    position: static;
+    background: none;
+    font-size: inherit;
+    color: inherit;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-transform: none;
+    border: none;
+    border-radius: 0;
+    font-weight: 400;
+
+    &::after {
+        content: none !important;
+    }
+}
+
+//$mainSiteColor: #f5821f;
+//$activeSiteColor: #e47a1d;
+//$transpColor: rgba(245, 130, 31, 0.05);
+//$paddingTopForBtn: 110px;
+//$backCheckImg: url(/public/icons/Icon-CheckMark.svg);
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    color: #202020;
+    max-width: 100vw;
+}
+
+main {
+    flex-grow: 1;
+    padding-bottom: 48px;
+}
+
+body > * {
+    width: 100%;
+    //max-width: 1366px;
+    margin: 0 auto;
+}
+
+.h-list {
+    display: flex;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    overflow: hidden;
+
+    > img {
+        object-fit: cover;
+    }
+    &--h > img {
+        height: 100%;
+    }
+    &--w > img {
+        width: 100%;
+    }
+    &--hw > img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.ico-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    line-height: 1;
+    min-width: 12px;
+    user-select: none;
+}
+
+@mixin fixedWH($height, $width) {
+    min-width: $width;
+    min-height: $height;
+    max-width: $width;
+    max-height: $height;
+    width: $width;
+    height: $height;
+}
+
+@mixin fontHeaderPage($weight: 500) {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: $weight;
+}
+@mixin fontMidHeader($weight: 500) {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: $weight;
+}
+@mixin fontBig($weight: 400) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: $weight;
+}
+@mixin fontMidTitle($weight: 500) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: $weight;
+}
+@mixin fontMid($weight: 400) {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: $weight;
+}
+@mixin fontSmall($weight: 400) {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: $weight;
+}
+@mixin fontCaption($weight: 400) {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: $weight;
+}
+
+@mixin fontTitle($weight: 700) {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: $weight;
+}
+
+@mixin scrollbarStyle($width: 5px) {
+    scrollbar-color: $mainSiteColor transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: $width;
+        height: $width;
+    }
+    &::-webkit-scrollbar-button {
+        height: 6px;
+        width: 6px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        //display: none;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #999;
+    }
+    &::-webkit-scrollbar-track-piece {
+        background-color: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb {
+        height: 24px;
+        background-color: $mainSiteColor;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-corner {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    &::-webkit-resizer {
+        background-color: $mainSiteColor;
+    }
+}
+
+@mixin hasParent($that) {
+    @at-root {
+        #{$that} {
+            @content;
+        }
+    }
+}
+
+[data-toggleable-block] {
+    display: none;
+    transition: 0s;
+}
+
+.header-page {
+    max-width: $maxContentWidth;
+    @include fontHeaderPage();
+    margin: 28px 24px;
+
+    @media (min-width: 1920px) {
+        max-width: $maxContentWidth !important;
+        width: 100%;
+        margin: 28px auto !important;
+    }
+
+    @media (max-width: 560px) {
+        margin: 24px 0;
+        max-width: 60%;
+    }
+}
+
+body {
+    .to-ico-mob {
+        background-size: 0%;
+        background-position: center, center;
+        background-repeat: no-repeat;
+
+        @include mobile() {
+            width: 24px;
+            height: 24px;
+
+            padding: 0 !important;
+            font-size: 0 !important;
+            box-shadow: none !important;
+
+            border: none !important;
+            border-radius: 0 !important;
+
+            background-size: 85%;
+
+            transition: 0s;
+        }
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .hide-mob {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .show-mob {
+        display: none;
+
+        @include mobile {
+            display: block;
+
+            &.flex {
+                display: flex;
+
+                &.column {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

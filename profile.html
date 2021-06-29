@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Мои заказы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="public/static/css/style.css" />
+</head>
+
+<body>
+    <main>
+        <div class="menu-cab-wrp">
+            <aside class="menu-orders-wrp">
+                <div class="name-orders">
+                    <a class="name-orders-link" href="#">
+                        <div class="name-orders-img-wrp">
+                            <img class="name-orders-img" src="img/son.jpg" alt="" />
+                        </div>
+                        <div>
+                            <h3>Name Surname</h3>
+                            <p>test@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-cab-user">
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/mail_my_orders_icon.svg"
+                                alt="Управление подписками" />
+                            <p>Управление подписками</p>
+                        </a>
+                    </div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/service_my_orders_icon.svg"
+                                alt="Сервис" />
+                            <p>Сервис</p>
+                        </a>
+                    </div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/sale_my_orders_icon.svg"
+                                alt="Акции (промокоды)" />
+                            <p>Акции (промокоды)</p>
+                        </a>
+                    </div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/my-orders-icon.svg" alt="Мои отзывы" />
+                            <p>Мои отзывы</p>
+                        </a>
+                    </div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/present_my_orders_icon.svg"
+                                alt="Мои бонусы" />
+                            <p>Мои бонусы</p>
+                        </a>
+                    </div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/eye_ma_orders_icon.svg"
+                                alt="Просмотренные товары" />
+                            <p>Просмотренные товары</p>
+                        </a>
+                    </div>
+                    <div class="menu-cab-line"></div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link menu-cab-like-pos" href="#">
+                            <div class="menu-cab-like-wrp">
+                                <img class="menu-cab-img" src="public/static/icons/like_my_orders_icon.svg"
+                                    alt="Список желаний" />
+                                <p>Список желаний</p>
+                            </div>
+                            <div class="menu-cab-menu-cab">1</div>
+                        </a>
+                    </div>
+                    <div class="menu-cab-text-wrp">
+                        <a class="menu-cab-wrp-link" href="#">
+                            <img class="menu-cab-img" src="public/static/icons/my-orders-icon.svg" alt="Мои заказы" />
+                            <p>Мои заказы</p>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+            <article class="main-column">
+                <h1 class="section-header hide-mob">Личные данные</h1>
+                <div class="main-body private-info">
+                    <section class="private-info__section">
+                        <div class="private-info__header">
+                            <span class="ui-ico">
+                                <img src="public/static/icons/person.svg" alt="">
+                            </span>
+                            <h5 class="private-info__header-text">
+                                Личные данные
+                            </h5>
+                            <button class="private-info__edit-btn to-ico-mob ui-second-btn"
+                                style="background-image: url(public/static/icons/edit.svg);"
+                                data-show-id="edit-person-info">
+                                Редактировать
+                            </button>
+                        </div>
+                        <div class="private-info__body">
+                            <section class="private-info__body-row">
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Фамилия</span>
+                                    <span class="private-info__data">Анонов</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Имя</span>
+                                    <span class="private-info__data">Аноним</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Отчество</span>
+                                    <span class="private-info__data">Анонимович</span>
+                                </div>
+                            </section>
+                            <section class="private-info__body-row">
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Дата рождения</span>
+                                    <span class="private-info__data">25 декабря 1994</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Пол</span>
+                                    <span class="private-info__data">Мужчина</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Язык</span>
+                                    <span class="private-info__data">Русский</span>
+                                </div>
+                            </section>
+                            <section class="private-info__body-row">
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Статус</span>
+                                    <span class="private-info__data">Физическое лицо-предприниматель</span>
+                                </div>
+                            </section>
+                        </div>
+                        <form class="edit-info" method="" action="" id="edit-person-info" data-showable>
+                            <div class="edit-info__header">
+                                <span class="ui-ico">
+                                    <img src="public/static/icons/person.svg" alt="">
+                                </span>
+                                <h5 class="edit-info__header-text">
+                                    Личные данные
+                                </h5>
+                            </div>
+                            <div class="edit-info__body">
+                                <section class="edit-info__body-row">
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Фамилия</span>
+                                        <input class="ui-input" placeholder="Анонов" type="text" name="">
+                                    </label>
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Имя</span>
+                                        <input class="ui-input" placeholder="Анон" type="text" name="">
+                                    </label>
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Отчество</span>
+                                        <input class="ui-input" placeholder="Анонимович" type="text" name="">
+                                    </label>
+                                </section>
+                                <section class="edit-info__body-row">
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Дата рождения</span>
+                                        <input class="ui-input-date" type="date" name="date" data-field-date>
+                                    </label>
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Пол</span>
+                                        <div class="ui-select" data-ui-select>
+                                            <input class="ui-input" type="text" placeholder="Мужской" readonly>
+                                            <img class="ui-select__btn" src="public/static/icons/downArrow.svg" alt="">
+                                            <ul class="ui-select__list" data-ui-select-list>
+                                                <li class="ui-select__item">
+                                                    Мужской
+                                                </li>
+                                                <li class="ui-select__item">
+                                                    Жeнский
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Язык</span>
+                                        <div class="ui-select" data-ui-select>
+                                            <input class="ui-input" type="text" placeholder="Русский" readonly>
+                                            <img class="ui-select__btn" src="public/static/icons/downArrow.svg" alt="">
+                                            <ul class="ui-select__list" data-ui-select-list>
+                                                <li class="ui-select__item">
+                                                    Русский
+                                                </li>
+                                                <li class="ui-select__item">
+                                                    Украинский
+                                                </li>
+                                                <li class="ui-select__item">
+                                                    Английский
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </section>
+                                <section class="edit-info__body-row">
+                                    <div class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caption">Статус</span>
+                                        <div class="ui-radio-group">
+                                            <label class="ui-radio-w">
+                                                <input class="ui-radio" name="status" type="radio">
+                                                <span class="ui-radio-cap">
+                                                    Физическое лицо-предприниматель
+                                                </span>
+                                            </label>
+                                            <label class="ui-radio-w">
+                                                <input class="ui-radio" name="status" type="radio">
+                                                <span class="ui-radio-cap">
+                                                    Физическое лицо
+                                                </span>
+                                            </label>
+                                            <label class="ui-radio-w">
+                                                <input class="ui-radio" name="status" type="radio">
+                                                <span class="ui-radio-cap">
+                                                    Юридическое лицо
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="edit-info__footer">
+                                <button class="ui-main-btn">
+                                    Сохранить
+                                </button>
+                                <button class="ui-third-btn" data-hide-showable>
+                                    Отмена
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="private-info__section">
+                        <div class="private-info__header">
+                            <span class="ui-ico">
+                                <img src="public/static/icons/mail.svg" alt="">
+                            </span>
+                            <h5 class="private-info__header-text">
+                                Контакты
+                            </h5>
+                            <button class="private-info__edit-btn to-ico-mob ui-second-btn"
+                                style="background-image: url(public/static/icons/edit.svg);"
+                                data-show-id="edit-contact-info">
+                                Редактировать
+                            </button>
+                        </div>
+                        <div class="private-info__body">
+                            <div class="private-info__body-row">
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Подтвержденный телефон</span>
+                                    <span class="private-info__data">+38 093 000 00 00</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Дополнительный телефон</span>
+                                    <span class="private-info__data">+38 068 000 00 00</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Электронная почта</span>
+                                    <span class="private-info__data">test@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="edit-info" method="" action="" id="edit-contact-info" data-showable>
+                            <div class="edit-info__header">
+                                <span class="ui-ico">
+                                    <img src="public/static/icons/mail.svg" alt="">
+                                </span>
+                                <h5 class="edit-info__header-text">
+                                    Контакты
+                                </h5>
+                            </div>
+                            <div class="edit-info__body">
+                                <section class="edit-info__body-row">
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Подтверждённые номер</span>
+                                        <div class="ui-input" data-input-w>
+                                            <input value="+380 68 000 00 00" maxlength="16" type="tel" name="">
+                                            <img class="ui-input__clear-btn" src="public/static/icons/cross.svg"
+                                                data-clear-input>
+                                        </div>
+                                    </label>
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Электронная почта</span>
+                                        <input class="ui-input" placeholder="test@gmail.com" type="email" name="">
+                                    </label>
+                                </section>
+                                <section class="edit-info__body-row">
+                                    <label class="ui-input-w private-info__data-pair">
+                                        <span class="ui-caprion">Дополнительный номер</span>
+                                        <div class="ui-input" data-input-w>
+                                            <input value="+380 68 000 00 00" maxlength="16" type="tel" name="">
+                                            <img class="ui-input__clear-btn" src="public/static/icons/cross.svg"
+                                                data-clear-input>
+                                        </div>
+                                    </label>
+                                </section>
+                                <section class="edit-info__body-row">
+                                    <div class="ui-main-btn" data-show-id="confirm-number-pop">
+                                        Подтвердить номер
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="edit-info__footer">
+                                <button class="ui-main-btn" disabled>
+                                    Сохранить
+                                </button>
+                                <button class="ui-third-btn" data-hide-showable>
+                                    Отмена
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="private-info__section">
+                        <div class="private-info__header">
+                            <span class="ui-ico">
+                                <img src="public/static/icons/car.svg" alt="">
+                            </span>
+                            <h5 class="private-info__header-text">
+                                Адрес доставки
+                            </h5>
+                            <button class="private-info__edit-btn to-ico-mob ui-second-btn"
+                                style="background-image: url(public/static/icons/edit.svg);"
+                                data-show-id="edit-delivery-info">
+                                Редактировать
+                            </button>
+                        </div>
+                        <div class="private-info__body">
+                            <div class="private-info__body-row">
+                                <div class="ui-input-w">
+                                    <span class="ui-caprion">Адрес №1</span>
+                                    <span class="private-info__data">Одесса, Отделение №3, Средняя ул., д. 83-А</span>
+                                </div>
+                            </div>
+                            <div class="private-info__body-row">
+                                <div class="ui-input-w">
+                                    <span class="ui-caprion">Адрес №2</span>
+                                    <span class="private-info__data">Одесса, Отделение №3, Средняя ул., д. 83-А</span>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="edit-delivery edit-info" method="" action="" id="edit-delivery-info" data-showable>
+                            <div class="edit-info__header">
+                                <span class="ui-ico">
+                                    <img src="public/static/icons/car.svg" alt="">
+                                </span>
+                                <h5 class="edit-info__header-text">
+                                    Адрес доставки
+                                </h5>
+                            </div>
+                            <div class="edit-info__body">
+                                <section class="edit-info__body-row">
+                                    <label class="ui-input-w">
+                                        <span class="ui-caprion">Город</span>
+                                        <input class="ui-input" placeholder="Одесса" type="text" name="">
+                                    </label>
+                                    <label class="ui-input-w">
+                                        <span class="ui-caprion">Улица</span>
+                                        <input class="ui-input" placeholder="Средняя" type="text" name="">
+                                    </label>
+                                    <label class="ui-input-w">
+                                        <span class="ui-caprion">Улица</span>
+                                        <input class="ui-input number" placeholder="18" type="text" name="">
+                                    </label>
+                                    <label class="ui-input-w">
+                                        <span class="ui-caprion">Квартира</span>
+                                        <div class="ui-input-w-row">
+                                            <input class="ui-input number" placeholder="555" type="text" name="">
+                                            <img class="btn" src="public/static/icons/cross.svg" alt="">
+                                        </div>
+                                    </label>
+                                </section>
+                                <section class="edit-info__body-row">
+                                    <div class="ui-third-btn green">
+                                        <img src="public/static/icons/plus.svg" alt="">
+                                        <span>Добавить еще адрес</span>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="edit-info__footer">
+                                <button class="ui-main-btn" disabled>
+                                    Сохранить
+                                </button>
+                                <button class="ui-third-btn" data-hide-showable>
+                                    Отмена
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="private-info__section">
+                        <div class="private-info__header">
+                            <span class="ui-ico">
+                                <img src="public/static/icons/lock.svg" alt="">
+                            </span>
+                            <h5 class="private-info__header-text">
+                                Логин
+                            </h5>
+                            <button class="private-info__edit-btn to-ico-mob ui-second-btn"
+                                style="background-image: url(public/static/icons/edit.svg);"
+                                data-show-id="change-mail-pop">
+                                Редактировать
+                            </button>
+                        </div>
+                        <div class="private-info__body">
+                            <div class="private-info__body-row">
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Электронная почта</span>
+                                    <span class="private-info__data">test@gmail.com</span>
+                                </div>
+                                <div class="ui-input-w private-info__data-pair">
+                                    <span class="ui-caprion">Пароль</span>
+                                    <span class="private-info__data">•••••••••••</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="ui-list show-mob flex column">
+                    <div class="ui-simple-btn" data-show-id="change-password-pop">
+                        Изменить пароль
+                    </div>
+                    <div class="ui-simple-btn">
+                        Выход
+                    </div>
+                    <div class="ui-simple-btn">
+                        Удалить аккаунт
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section id="this-popups-list">
+        <div class="popup-block" id="confirm-number-pop" data-pop-block>
+            <div class="popup confirm-number-pop" data-pop>
+                <img class="popup__close-btn" src="public/static/icons/cross.svg" alt="" data-close-pop>
+                <div class="popup__title">
+                    Подтверждение номера телефона
+                </div>
+                <div class="popup__body">
+                    <div class="popup__body-row">
+                        <label class="ui-input-w private-info__data-pair">
+                            <span class="ui-caprion">Подтверждённые номер</span>
+                            <div class="ui-input-w-row">
+                                <div class="ui-input" data-input-w>
+                                    <input value="+380 68 000 00 00" maxlength="16" type="tel" name="">
+                                    <img class="ui-input__clear-btn" src="public/static/icons/cross.svg"
+                                        data-clear-input>
+                                </div>
+                                <span class="ui-caption">
+                                    На указанный номер будет отправлено SMS с кодом подтверждения.
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="popup__body-row">
+                        <label class="ui-input-w private-info__data-pair">
+                            <span class="ui-caprion">Код из SMS</span>
+                            <div class="ui-input-w-row">
+                                <input class="ui-input" value="0000000000" maxlength="10" type="tel" name="">
+                                <span class="ui-caption-btn" onclick="return false">Отправить код ещё раз.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__footer">
+                    <div class="confirm-number-pop__status-label">
+                        <p>
+                            Код отправлен. Вы снова сможете отправить код подтверждения через
+                        </p>
+                        <b>
+                            00:57
+                        </b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-block" id="change-mail-pop" data-pop-block>
+            <div class="popup change-mail-pop" data-pop>
+                <img class="popup__close-btn" src="public/static/icons/cross.svg" alt="" data-close-pop>
+                <div class="popup__title">
+                    Изменение E-mail
+                </div>
+                <div class="popup__body">
+                    <div class="popup__body-row">
+                        <label class="ui-input-w private-info__data-pair">
+                            <span class="ui-caprion">Введите новый адрес электронной почты.</span>
+                            <input class="ui-input" value="Test@test.com" type="text">
+                        </label>
+                    </div>
+                    <div class="popup__body-row">
+                        <div class="ui-main-btn">Сохранить</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-block" id="change-password-pop" data-pop-block>
+            <div class="popup change-mail-pop" data-pop>
+                <img class="popup__close-btn" src="public/static/icons/cross.svg" alt="" data-close-pop>
+                <div class="popup__title">
+                    Изменение пароля
+                </div>
+                <div class="popup__body">
+                    <div class="popup__body-row">
+                        <p>
+                            После изменения пароля произойдет выход из аккаунта на всех устройствах,
+                            где вы вошли с текущим паролем.
+                        </p>
+                    </div>
+                    <div class="popup__body-row">
+                        <label class="ui-input-w private-info__data-pair">
+                            <span class="ui-caprion">Текущий пароль</span>
+                            <div class="ui-input" data-input-w>
+                                <input value="Test@test.com" type="password">
+                                <img class="ui-input__eye-btn show" src="public/static/icons/eyeShow.svg" alt=""
+                                    data-passwd-show-btn>
+                                <img class="ui-input__eye-btn hide" src="public/static/icons/eyeHide.svg" alt=""
+                                    data-passwd-hide-btn>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="popup__body-row">
+                        <label class="ui-input-w private-info__data-pair">
+                            <span class="ui-caprion">Новый пароль</span>
+                            <div class="ui-input" data-input-w>
+                                <input value="Test@test.com" id="newPasswd" type="password">
+                                <img class="ui-input__eye-btn show" src="public/static/icons/eyeShow.svg" alt=""
+                                    data-passwd-show-btn>
+                                <img class="ui-input__eye-btn hide" src="public/static/icons/eyeHide.svg" alt=""
+                                    data-passwd-hide-btn>
+                            </div>
+                            <span class="ui-caption-btn" data-gen-passwd-for-id="newPasswd">
+                                Сгенерировать пароль
+                            </span>
+                        </label>
+                    </div>
+                    <div class="popup__body-row">
+                        <label class="ui-input-w private-info__data-pair">
+                            <span class="ui-caprion">Новый пароль ещё раз</span>
+                            <div class="ui-input" data-input-w>
+                                <input value="Test@test.com" type="password">
+                                <img class="ui-input__eye-btn show" src="public/static/icons/eyeShow.svg" alt=""
+                                    data-passwd-show-btn>
+                                <img class="ui-input__eye-btn hide" src="public/static/icons/eyeHide.svg" alt=""
+                                    data-passwd-hide-btn>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="popup__body-row">
+                        <div class="ui-main-btn">Изменить пароль</div>
+                        <div class="ui-third-btn" data-close-pop>Отмена</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="public/static/js/jQuery/jquery-3.4.1.js"></script>
+    <script src="public/static/js/script.js"></script>
+
+</body>
+
+</html>

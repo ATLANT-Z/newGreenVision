@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/static/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="header-page">
+            Оформление заказа
+        </div>
+        <div class="body-page cart">
+            <section class="order-info">
+                <div class="content">
+                    <div class="order-info__row">
+                        <div class="order-info__title">
+                            1.Контактные данные:
+                        </div>
+                        <div class="order-info__body">
+                            <input class="ui-input" type="text" placeholder="Имя и Фамилия">
+                            <input class="ui-input" type="text" placeholder="Ваш телефон">
+                            <input class="ui-input" type="text" placeholder="Ваш E-mail">
+                        </div>
+                    </div>
+                    <div class="order-info__row">
+                        <div class="order-info__title">
+                            2. Способ оплаты:
+                        </div>
+                        <div class="order-info__body">
+                            <div class="order-info__radio-block">
+                                <label class="radio-label" for="payment[0]">
+                                    <input class="ui-radio" type="radio" name="payment-type" id="payment[0]">
+                                    <span class="radio-label__text">Наличными при получении</span>
+                                    <span
+                                        data-title="Наличными при получении - Вы можете оплатить заказ наличными, при получении."
+                                        class="ico-wrapper ui-info">
+                                        <img src="public/static/icons/infoIco.svg" alt="">
+                                    </span>
+                                </label>
+                                <label class="radio-label" for="payment[1]">
+                                    <input class="ui-radio" type="radio" name="payment-type" id="payment[1]">
+                                    <span class="radio-label__text">Оплата картой</span>
+                                    <ul class="payments-row">
+                                        <li class="ico-wrapper">
+                                            <img src="public/static/icons/payments/Visa.png" alt="">
+                                        </li>
+                                        <li class="ico-wrapper">
+                                            <img src="public/static/icons/payments/mastercard.png" alt="">
+                                        </li>
+                                        <li class="ico-wrapper">
+                                            <img src="public/static/icons/payments/Privat.png" alt="">
+                                        </li>
+                                    </ul>
+                                    <span
+                                        data-title="Оплата картой - После нажатия кнопки “Оформить заказ” вы будете перенаправлены на страницу платежного сервиса LiqPay для совершения оплаты."
+                                        class="ico-wrapper ui-info">
+                                        <img src="public/static/icons/infoIco.svg" alt="">
+                                    </span>
+                                </label>
+                                <label class="radio-label" for="payment[2]">
+                                    <input class="ui-radio" type="radio" name="payment-type" id="payment[2]">
+                                    <span class="radio-label__text">Безналичный расчет для ФОП</span>
+                                    <span
+                                        data-title="Безналичный расчет для физических лиц - В данном случае после оформления заказа с Вами свяжется менеджер для уточнения дополительной информации и выставления счёта."
+                                        class="ico-wrapper ui-info">
+                                        <img src="public/static/icons/infoIco.svg" alt="">
+                                    </span>
+                                </label>
+                                <label class="radio-label" for="payment[3]">
+                                    <input class="ui-radio" type="radio" name="payment-type" id="payment[3]">
+                                    <span class="radio-label__text">Оплата частями</span>
+                                    <span data-title="Контентщики контнет ещё не дали сюда :D"
+                                        class="ico-wrapper ui-info">
+                                        <img src="public/static/icons/infoIco.svg" alt="">
+                                    </span>
+                                </label>
+                                <label class="radio-label" for="payment[4]">
+                                    <input class="ui-radio" type="radio" name="payment-type" id="payment[4]">
+                                    <span class="radio-label__text">Безналичный расчет для юридических лиц</span>
+                                    <span data-title="Контентщики контнет ещё не дали сюда :D"
+                                        class="ico-wrapper ui-info">
+                                        <img src="public/static/icons/infoIco.svg" alt="">
+                                    </span>
+                                </label>
+                            </div>
+                            <article class="pay-jurist-face">
+                                <div class="row">
+                                    <div class="input-wrap big">
+                                        <div class="input-title">
+                                            Данные юридического лица:
+                                        </div>
+                                        <input class="ui-input" type="text"
+                                            placeholder="Полное название юридического лица">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="input-title">
+                                            Код ЕГРПОУ:
+                                        </div>
+                                        <input class="ui-input" type="text" placeholder="00000000" pattern="^[0-9]+$"
+                                            maxlength="8">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-wrap">
+                                        <div class="input-title">
+                                            Получатель:
+                                        </div>
+                                        <label class="radio-label" for="receiver[0]">
+                                            <input class="ui-radio" type="radio" name="payment-type" id="receiver[0]">
+                                            <span class="radio-label__text">Я</span>
+                                        </label>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <label class="radio-label" for="receiver[1]">
+                                            <input class="ui-radio" type="radio" name="payment-type" id="receiver[1]">
+                                            <span class="radio-label__text">Другой человек</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input class="ui-input" type="text" placeholder="Имя и Фамилия">
+                                    <input class="ui-input" type="text" placeholder="Телефон">
+                                    <input class="ui-input" type="text" placeholder="E-mail">
+                                </div>
+                            </article>
+                            <article class="part-pay-block">
+                                <form action="" class="part-pay-block__slider-block" data-p-slider data-slider-value="2"
+                                    data-min-month="2" data-max-month="9">
+                                    <div class="part-pay-block__title">
+                                        Выберите количество месяцев
+                                    </div>
+                                    <div class="part-pay-block__body">
+                                        <input class="ui-input" value="7" type="text" name="months" data-p-slider-output
+                                            required>
+                                        <div class="pay-slider part-pay-block__slider">
+                                            <div class="pay-slider__bar" data-p-slider-bar>
+                                                <div class="bar-progress" data-p-slider-progress></div>
+                                            </div>
+                                            <div class="pay-slider__knob" data-p-slider-knob>
+                                            </div>
+                                            <div class="scale" data-p-slider-scale>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="part-pay-block__info">
+                                    <div class="part-pay-block__title">
+                                        Условия покупки
+                                    </div>
+                                    <div class="info part-pay-block__body">
+                                        <div class="info__row">
+                                            <span class="info__title">
+                                                Всего:
+                                            </span>
+                                            <span class="info__value">
+                                                125 314 грн
+                                            </span>
+                                        </div>
+                                        <div class="info__row">
+                                            <span class="info__title">
+                                                Количество платежей:
+                                            </span>
+                                            <span class="info__value">
+                                                12
+                                            </span>
+                                        </div>
+                                        <div class="info__row">
+                                            <span class="info__title">
+                                                Ежемесячный платеж:
+                                            </span>
+                                            <span class="info__value">
+                                                10 442 грн
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="order-info__row">
+                        <div class="order-info__title">
+                            3. Способ доставки:
+                        </div>
+                        <div class="order-info__body">
+                            <div class="select-input-wrapper">
+                                <v-select label="name" :options="deliveries" v-model="deliveryAll" required>
+                                </v-select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-info__footer">
+                        <input class="ui-checkbox small" type="checkbox" id="agree-policy">
+                        <label class="text" for="agree-policy">
+                            Подтверждая заказ, я соглашаюсь с
+                            <a href="https://dev.logicpower.ua/about_company/delivery" class="ui-link">
+                                условиями доставки
+                            </a>
+                            и
+                            <a href="https://dev.logicpower.ua/private-policy" class="ui-link">
+                                политикой конфиденциальности
+                            </a>
+                        </label>
+                    </div>
+                </div>
+                <div class="order-info__back-row">
+                    <a href="javascript:void(0);" class="ui-btn-back btn">
+                        <span class="ico-wrapper "><svg xmlns="http://www.w3.org/2000/svg" width="17.294" height="14"
+                                viewBox="0 0 17.294 14">
+                                <path
+                                    d="M6.7,3.8V0L0,6.543l6.7,6.543v-3.8c4.83,0,8.1,1.522,10.595,4.717C16.359,9.435,13.4,4.717,6.7,3.8Z"
+                                    fill="#383838" style="fill: rgb(67, 67, 67);"></path>
+                            </svg>
+                        </span>
+                        <span class="text">
+                            Назад
+                        </span>
+                    </a>
+                </div>
+            </section>
+            <section class="order-structure">
+                <div class="content">
+                    <div class="order-info__title">
+                        <span class="text">
+                            4. Мой заказ:
+                        </span>
+                        <a class="ui-link" href="javascript:void(0);">
+                            Редактировать заказ
+                        </a>
+                    </div>
+                    <ul class="product-list">
+                        <li class="product-row product-list__item">
+                            <div class="product-row__image img-wrapper">
+                                <img src="https://dev.logicpower.ua/storage/253144/3113_1.png" alt="">
+                            </div>
+                            <div class="product-row__info">
+                                <div class="product-row__headers">
+                                    <div class="name">ИБП W2500VA + литиевая (LifePo4)</div>
+                                    <div class="category">Комплект резервного питания LogicPower</div>
+                                </div>
+                                <div class="product-row__price">
+                                    <div class="quantity-block">
+                                        <button class="quantity-arrow-minus">-</button>
+                                        <input class="quantity-num" type="number" name="product_col" value="3" min="1"
+                                            max="1000">
+                                        <button class="quantity-arrow-plus">+</button>
+                                    </div>
+                                    <div class="sum">
+                                        1 800 грн
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-row product-list__item">
+                            <div class="product-row__image img-wrapper">
+                                <img src="https://dev.logicpower.ua/storage/253144/3113_1.png" alt="">
+                            </div>
+                            <div class="product-row__info">
+                                <div class="product-row__headers">
+                                    <div class="name">ИБП W2500VA + литиевая (LifePo4)</div>
+                                    <div class="category">Комплект резервного питания LogicPower</div>
+                                </div>
+                                <div class="product-row__price">
+                                    <div class="quantity-block">
+                                        <button class="quantity-arrow-minus">-</button>
+                                        <input class="quantity-num" type="number" name="product_col" value="3" min="1"
+                                            max="1000">
+                                        <button class="quantity-arrow-plus">+</button>
+                                    </div>
+                                    <div class="sum">
+                                        125 500 грн
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-row product-list__item">
+                            <div class="product-row__image img-wrapper">
+                                <img src="https://dev.logicpower.ua/storage/253144/3113_1.png" alt="">
+                            </div>
+                            <div class="product-row__info">
+                                <div class="product-row__headers">
+                                    <div class="name">ИБП W2500VA + литиевая (LifePo4)</div>
+                                    <div class="category">Комплект резервного питания LogicPower</div>
+                                </div>
+                                <div class="product-row__price">
+                                    <div class="quantity-block">
+                                        <button class="quantity-arrow-minus">-</button>
+                                        <input class="quantity-num" type="number" name="product_col" value="3" min="1"
+                                            max="1000">
+                                        <button class="quantity-arrow-plus">+</button>
+                                    </div>
+                                    <div class="sum">
+                                        31 400 грн
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="order-structure__total-price">
+                        <div class="total-sum">
+                            <span class="text">
+                                Сумма заказа:
+                            </span>
+                            <span class="sum">
+                                145 400 грн
+                            </span>
+                        </div>
+                        <div class="total-discount">
+                            <span class="text">
+                                Сумма скидки:
+                            </span>
+                            <span class="sum">
+                                -29 080 грн
+                            </span>
+                        </div>
+                        <div class="total-price">
+                            <span class="text">
+                                Итого:
+                            </span>
+                            <span class="sum">
+                                116 320 грн
+                            </span>
+                        </div>
+                    </div>
+                    <div class="promocode">
+                        <input class="promocode__input" type="text" placeholder="Введите промокод">
+                        <button class="promocode__btn btn">Применить</button>
+                    </div>
+                    <div class="order-structure__footer">
+                        <div class="accept-btn btn">
+                            Подтверждаю заказ
+                        </div>
+                        <div class="caption-row">
+                            <div class="caption-row__image img-wrapper">
+                                <img src="public/static/icons/headIcon.svg" alt="">
+                            </div>
+                            <div class="caption-row__text">
+                                После оформления заказа с Вами обязательно свяжется менеджер для согласования всех
+                                деталей.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!--<div style="display: flex; width: 100%; justify-content: center; margin: 48px 0;">
+        <button class="cybr-btn">
+            Cyber<span aria-hidden>_</span>
+            <span aria-hidden class="cybr-btn__glitch">Cyber_</span>
+            <span aria-hidden class="cybr-btn__tag">R25</span>
+        </button>
+        <button class="cybr-btn">
+            Buttons<span aria-hidden>_</span>
+            <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
+            <span aria-hidden class="cybr-btn__tag">R25</span>
+        </button>
+    </div>-->
+
+    <section style="width: 400px; margin: 24px;">
+        <div class="range-slider" data-range-slider data-start-min="1500" data-start-max="15000">
+            <div class="range-slider__inputs">
+                <input class="range-slider__input" type="text" value="3000" data-range-input-min>
+                -
+                <input class="range-slider__input" type="text" value="12000" data-range-input-max>
+                <span class="range-slider__price">
+                    грн
+                </span>
+                <button class="range-slider__btn" type="button">
+                    ок
+                </button>
+            </div>
+            <div class="range-slider__bar" data-range-bar>
+                <div class="range-slider__progress" data-range-progress></div>
+                <div class="range-slider__knob min" data-range-knob-min></div>
+                <div class="range-slider__knob max" data-range-knob-max></div>
+            </div>
+        </div>
+    </section>
+    <div class="out-banner" data-out-banner>
+        <div class="out-banner__close-btn" data-out-banner-close-btn></div>
+        <div class="out-banner__list" data-out-banner-list>
+            <a href="javascript:void(0);" class="out-banner__list-item" data-out-banner-list-item>
+                <div class="out-banner__bg-img" style="background-image: url(public/static/images/banner-bg.png);">
+                </div>
+                <div class="out-banner__img-w">
+                    <img src="public/static/images/banner-img.png" alt="">
+                </div>
+                <div class="out-banner__info">
+                    <h3 class="out-banner__title">
+                        ЗАГОЛОВОК новости
+                    </h3>
+                    <p class="out-banner__text">
+                        Описание новости, описание новости
+                    </p>
+                    <ul class="out-banner__icon-list">
+                        <li class="out-banner__icon-w">
+                            <img src="public/static/icons/stock.png" alt="">
+                        </li>
+                        <li class="out-banner__icon-w">
+                            <img src="public/static/icons/gift.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="out-banner__more-btn">Подробнее</div>
+                </div>
+            </a>
+            <a href="javascript:void(0);" class="out-banner__list-item" data-out-banner-list-item>
+                <div class="out-banner__bg-img" style="background-image: url(public/static/images/banner-bg.png);">
+                </div>
+                <div class="out-banner__img-w">
+                    <img src="public/static/images/banner-img.png" alt="">
+                </div>
+                <div class="out-banner__info">
+                    <h3 class="out-banner__title">
+                        ЗАГОЛОВОК новости
+                    </h3>
+                    <p class="out-banner__text">
+                        Описание новости, описание новости
+                    </p>
+                    <ul class="out-banner__icon-list">
+                        <li class="out-banner__icon-w">
+                            <img src="public/static/icons/stock.png" alt="">
+                        </li>
+                        <li class="out-banner__icon-w">
+                            <img src="public/static/icons/gift.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="out-banner__more-btn">Подробнее</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <h2> Привет!!</h2>
+
+    <script src="public/static/js/jQuery/jquery-3.4.1.js"></script>
+    <script src="public/static/js/script.js"></script>
+    <script src="public/static/js/slider.js"></script>
+    <script src="public/static/js/out-banner.js"></script>
+</body>
+
+</html>

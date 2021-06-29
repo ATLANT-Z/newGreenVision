@@ -1,0 +1,125 @@
+.menu-orders-wrp {
+    width: 280px;
+    min-width: 280px;
+    margin-right: 24px;
+
+    @include bigMobile() {
+        position: absolute;
+        right: 100%;
+    }
+}
+
+.menu-cab-wrp {
+    width: 100%;
+    max-width: 1440px;
+    padding-top: 16px;
+    @extend %pos-cent-marg;
+    @extend %pos-cent-flex;
+    align-items: flex-start;
+}
+
+.name-orders {
+    margin-bottom: 28px;
+}
+
+.name-orders-img {
+    width: 46px;
+    height: 46px;
+    background-color: $color-back-grey;
+    border-radius: 50%;
+}
+
+.name-orders-link {
+    @extend %pos-left-flex;
+    @extend %padding-left-my-orders;
+    min-height: 72px;
+    box-shadow: $block-shadow;
+    font-family: $font-roboto-reg;
+    color: $color-text-orders;
+    border-radius: $border-radius;
+}
+
+.name-orders-link:hover {
+    color: $color-main;
+}
+
+.name-orders-link > div > h3 {
+    @extend %font-weight-400;
+    @extend %text-size-my-orders;
+    margin-bottom: 8px;
+}
+
+.name-orders-link > div > p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #8a8a8a;
+}
+
+.name-orders-img-wrp {
+    @extend %margin-right-icon;
+}
+
+.menu-cab-wrp-link {
+    @extend %pos-left-flex;
+}
+
+.menu-cab-like-wrp {
+    @extend %pos-left-flex;
+}
+
+.menu-cab-like-pos {
+    justify-content: space-between;
+}
+
+.menu-cab-wrp-link > div > p {
+    @extend %text-main;
+    @extend %text-size-my-orders;
+}
+
+.menu-cab-wrp-link > p {
+    @extend %text-main;
+    @extend %text-size-my-orders;
+}
+
+.menu-cab-wrp-link:hover {
+    color: $color-main;
+}
+
+.menu-cab-img {
+    @extend %margin-right-icon;
+}
+
+.menu-cab-text-wrp {
+}
+
+.menu-cab-user {
+    padding: 10px 14px;
+    box-shadow: $block-shadow;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+}
+
+.menu-cab-text-wrp + .menu-cab-text-wrp {
+    margin-bottom: 24px;
+}
+
+.menu-cab-line {
+    padding-top: 10px;
+    margin-bottom: 14px;
+    border-bottom: $line-grey-col;
+}
+
+.menu-cab-menu-cab {
+    min-width: 24px;
+    height: 24px;
+    padding: 2px 7px;
+    @extend %text-main;
+    background-color: $color-main;
+    border-radius: 34px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+}
