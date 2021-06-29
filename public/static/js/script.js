@@ -39,7 +39,6 @@ function setTrueWidthForInput(input) {
 //изменять ширину инпут при вводе
 $('[data-ui-growable-input]').on('keydown', uiGrowableInputKeyDownHandlerJQuery);
 
-
 //всплывает caption
 {
     function popCaptionBuilder() {
